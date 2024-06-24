@@ -21,13 +21,13 @@ import java.time.LocalDateTime;
 public class Account {
     @Id
     @GeneratedValue
-    private Long id;    // pk 지정
+    private Long id;
 
     @ManyToOne
     private AccountUser accountUser;
     private String accountNumber;
 
-    @Enumerated(EnumType.STRING) // enum 값의 실제 문자열 저장
+    @Enumerated(EnumType.STRING)
     private AccountStatus accountStatus;
     private Long balance;
 
