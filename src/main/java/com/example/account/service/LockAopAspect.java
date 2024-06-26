@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class LockAopAspect {
     private final LockService lockService;
 
-    @Around("@annotation(com.example.Account.aop.AccountLock) && args(request)")
+    @Around("@annotation(com.example.account.aop.AccountLock) && args(request)")
     public Object aroundMethod(ProceedingJoinPoint pjp, AccountLockIdInterface request) throws Throwable {
         // lock 취득 시도
         lockService.lock(request.getAccountNumber());
